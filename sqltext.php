@@ -1,7 +1,7 @@
 <?php
 $servername = "nyecs3620database.mysql.database.azure.com";
 $username = "nyeAdmin@nyecs3620database";
-$password = "Combustioniskey9";
+$password = "";
 $dbname = "Movies";
 
 // Create connection
@@ -22,5 +22,3 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
-
-this is test
