@@ -11,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO shows(show_id, title)
+$sql = "INSERT INTO shows(show_id, Title)
 VALUES (1, 'Gemini Man')";
 
 if ($conn->query($sql) === TRUE) {
