@@ -1,7 +1,7 @@
 <?php
 $servername = "nyecs3620database.mysql.database.azure.com";
-$username = "nyeAdmin@nyecs3620database";
-$password = "Combustioniskey9";
+$username = $_ENV['SQLUSER'];
+$password = $_ENV['SQLPW'];
 $dbname = "cs3620_proj";
 
 // Create connection
