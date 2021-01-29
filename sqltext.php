@@ -1,8 +1,8 @@
 <?php
 $servername = "nyecs3620database.mysql.database.azure.com";
-$username = $_ENV['SQLUSER'];
-$password = $_ENV['SQLPW'];
-$dbname = "cs3620_proj";
+$username = "nyeAdmin@nyecs3620database";
+$password = "";
+$dbname = "Movies";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,8 +11,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO testTable(testId)
-VALUES ('Thisisatest')";
+$sql = "INSERT INTO shows(show_id, Title)
+VALUES (1, 'Gemini Man')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -22,5 +22,3 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
-
-this is test
