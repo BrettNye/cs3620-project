@@ -1,0 +1,21 @@
+<h1 id="header1">
+
+</h1>
+
+<script>
+    function hello(){
+        fetch(url)
+        .then(response => response.json())
+        .then(
+            function (data){
+                document.getElementById("firstname").innerHTML = data.first_name;
+                document.getElementById("lastname").innerHTML = data.last_name;
+                document.getElementById("username").innerHTML = data.username;
+            }
+        );
+    }
+</script>
+
+<div id="firstname"></div>
+<div id="lastname"></div>
+<div id="username"></div>
