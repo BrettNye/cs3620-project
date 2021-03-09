@@ -1,16 +1,19 @@
 <?php
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+session_start();
 
-    session_start();
+require_once('./user/user.php');
 
-    require_once('./user/user.php');
+if($user->getUserByUsername() == "0"){
 
-    $user = new user();
-    $user->setUsername($_POST["username"]);
-    $user->setFirstName($_POST["firstname"]);
-    $user->setLastName($_POST["lastname"]);
-    $user->createUser();
+$user = new user();
+$user->setUsername($_POST["username"]);
+$user->setFirstName($_POST["firstName"]);
+$user->setLastName($_POST["lastName"]);
+$user->setPassword($_POST["password"]);
+$user->createUser(); 
+} else{
+    
+}
+
 ?>
