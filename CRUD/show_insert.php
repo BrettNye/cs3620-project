@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once ('../CRUD/show/show.php');
 echo $_SESSION["user_id"];
 

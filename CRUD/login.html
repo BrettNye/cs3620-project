@@ -10,7 +10,18 @@
 
     <title>Login</title>
   </head>
+  <style>
+      .form-container{
+        margin-right: 20%;
+        margin-left: 20%;
+      }
+
+      form{
+        width: 30%;
+      }
+  </style>
   <body>
+    <div class="form-container mt-5 d-flex justify-content-center align-items-center flex-column">
     <form action="login.php" method="POST">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Username</label>
@@ -24,7 +35,7 @@
         <p id="failed"></p>
       </form>
       <a href="./create_user.php"><p>Don't have an account? Sign Up</p></a>
-
+</div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -34,7 +34,7 @@ class ShowDAO{
           $show->setName($row['Title']);
           $show->setRating($row['Rating']);
           $show->setDescription($row['Description']);
-          $show->setShowID($row['user_id']);
+          $show->setUserID($row['user_id']);
           $shows[$index] = $show;
           $index++;
         }
@@ -60,6 +60,20 @@ class ShowDAO{
           echo "Error: " . $sql . "<br>" . $conn->error;
         }
         $conn->close();
+    }
+
+    function DeleteShow($userid, $showid){
+      require_once ('./utilities/connection.php');
+
+      $sql = "DELETE FROM shows WHERE user_id = " . $userid . " AND show_id = " . $showid;
+
+      if ($conn->query($sql) === TRUE) {
+        echo "show deleted";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+  
+      $conn->close();
     }
     
 
